@@ -14,8 +14,9 @@ class LoginController extends Controller
             'password' => 'required|string'
         ]);
 
-        if(!Auth::attempt($login)){
-            return response(['message' => 'Invalid credentials!'])
+        if(!Auth::attempt( $login )) {
+            return response(['message' => 'Invalid credentials.']);
         }
+        
     }
 }
